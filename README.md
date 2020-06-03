@@ -1,1 +1,1 @@
-Model_Rest_API
+I created this API as a part of my Final Year Project. Basically this api takes tif satellite image of a forest area as a input from the user and then return the class numbers found in that image. Like if you send a image that contains urban, forest and shabby areas then API will return these labels as a output.
