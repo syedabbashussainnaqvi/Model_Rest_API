@@ -13,9 +13,9 @@ class FileUploadView(APIView):
       file_serializer = FileSerializer(data=request.data)
       if file_serializer.is_valid():
           try:
-              print("Above")
               res = predict(file_serializer.validated_data["file"])
               d = {'result': res}
+              print("Everything Executed Successfully")
               return Response(d, status=status.HTTP_201_CREATED)
           except Exception as e:
               predictions = {"error": "2", "message": str(e)}
