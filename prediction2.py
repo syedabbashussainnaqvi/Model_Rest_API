@@ -72,4 +72,5 @@ def predict(path):
 
     image = np.array(tiff.imread(path), dtype=float)[:,:,:10]
     img = np.reshape(image, (1, 120, 120, 10))
-    model.predict_classes(img)
+    res = model.predict_classes(img)
+    return res
