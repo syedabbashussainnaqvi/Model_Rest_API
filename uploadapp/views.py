@@ -16,10 +16,10 @@ class FileUploadView(APIView):
           try:
 
               if(file_serializer.validated_data["modelCategory"]=="S2"):
-                  print("S1_S2")
+                  print("S2")
                   res = predictS2(file_serializer.validated_data["file"])
               elif(file_serializer.validated_data["modelCategory"]=="S1"):
-                  print("S1_S2")
+                  print("S1")
                   res = predictS2(file_serializer.validated_data["file"])
               else:
                   res = predictS1_S2(file_serializer.validated_data["file"])
